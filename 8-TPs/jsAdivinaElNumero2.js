@@ -14,15 +14,71 @@ var contadorIntentos;
 
 function comenzar()
 {
-	//Genero el número RANDOM entre 1 y 100
-	 
-	
+	 //Genero el número RANDOM entre 1 y 100
+	 numeroSecreto=Math.floor((Math.random() * 100) + 1);
+		//alert(numeroSecreto);
+	alert("Numero secreto generado. Que empiece el juego!")
 
+		numero.value="";
+		intentos.value="";
+		contadorIntentos=0;
+		numeroIntento="";
+	
 }
 
 function verificar()
 {
-	
+	numeroIntento=numero.value;
+
+	if(numeroIntento>numeroSecreto){
+		alert("Te pasaste...");
+		contadorIntentos=(contadorIntentos + 1);
+		intentos.value=contadorIntentos;
+		numeroIntento="";
+		numero.value="";
+	}else if(numeroIntento<numeroSecreto){
+		alert("Falta...");
+		contadorIntentos=(contadorIntentos + 1);
+		intentos.value=contadorIntentos;
+		numeroIntento="";
+		numero.value="";
+	}else{
+
+		switch(contadorIntentos){
+
+			case(1):
+					alert("Usted es un Psiquico");
+					break;
+			case(2):
+					alert("Excelente percepcion");
+					break;
+			case(3):
+					alert("Esto es suerte");
+					break;
+			case(4):
+					alert("Excelente tecnica");
+					break;
+			case(5):
+					alert("Usted esta en la media");
+					break;
+			case(!(contadorIntentos<=6 || contadorIntentos>=10)):
+					alert("falta tecnica");
+					break;
+			default:
+					alert("Afortunado en el amor!!")
+					break;
+
+		}
+		//Vuelvo todos los valores de variables a 0 para que el usuario pueda volver a jugar si lo desea
+
+		numero.value="";
+		intentos.value="";
+		numeroSecreto="";
+		contadorIntentos=0;
+		numeroIntento="";
+
+		alert("Haz click en el boton 'Comenzar' para jugar otra vez!");
+	}
 	
 
 }
