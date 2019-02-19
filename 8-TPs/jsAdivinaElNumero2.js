@@ -30,45 +30,53 @@ function verificar()
 {
 	numeroIntento=numero.value;
 
-	if(numeroIntento>numeroSecreto){
+	if(numeroIntento>numeroSecreto)
+	{
 		alert("Te pasaste...");
 		contadorIntentos=(contadorIntentos + 1);
 		intentos.value=contadorIntentos;
 		numeroIntento="";
 		numero.value="";
-	}else if(numeroIntento<numeroSecreto){
+	}
+	else if(numeroIntento<numeroSecreto)
+	{
 		alert("Falta...");
 		contadorIntentos=(contadorIntentos + 1);
 		intentos.value=contadorIntentos;
 		numeroIntento="";
 		numero.value="";
-	}else{
-
+	}
+	else
+	{
+		if(!(contadorIntentos<=6 || contadorIntentos>=10)){
+			contadorIntentos=610;
+		}
 		switch(contadorIntentos){
 
-			case(1):
+			case 1:
 					alert("Usted es un Psiquico");
 					break;
-			case(2):
+			case 2:
 					alert("Excelente percepcion");
 					break;
-			case(3):
+			case 3:
 					alert("Esto es suerte");
 					break;
-			case(4):
+			case 4:
 					alert("Excelente tecnica");
 					break;
-			case(5):
+			case 5:
 					alert("Usted esta en la media");
 					break;
-			case(!(contadorIntentos<=6 || contadorIntentos>=10)):
-					alert("falta tecnica");
+			case 610:
+					alert("Falta tecnica");
 					break;
 			default:
 					alert("Afortunado en el amor!!")
 					break;
 
 		}
+
 		//Vuelvo todos los valores de variables a 0 para que el usuario pueda volver a jugar si lo desea
 
 		numero.value="";
