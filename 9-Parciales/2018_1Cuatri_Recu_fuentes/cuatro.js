@@ -97,13 +97,18 @@ mensaje=mensaje+", el total de su compra fue $"+total;
 
 //CALCULAMOS CUANTO DESCUENTO TIENE
 
-if(total>=100){
+if(total>=100)
+{
 	totalFinal=total-((total*10)/100);
 	mensaje=mensaje+", como su compra supero o igualo los $100, tuvo un descuento del 10%, siendo el precio final $"+totalFinal;	
-}else if(total>=50){
+}
+else if(total>=50)
+{
 	totalFinal=total-((total*5)/100);
 	mensaje=mensaje+", como su compra supero o igualo los $50, tuvo un descuento del 5%, siendo el precio final $"+totalFinal;
-}else{
+}
+else
+{
 	totalFinal=((total*15)/100)+total;
 	mensaje=mensaje+", por el valor de su compra, usted tiene un recargo del 15%, el precio final es $"+totalFinal;	
 }

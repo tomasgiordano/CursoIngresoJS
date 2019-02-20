@@ -5,7 +5,7 @@ function mostrar()
 	var contador = 10;
 	contador=parseInt(contador);
 
-	while(contador >= 1)
+	while(contador > 0)
 	{
 		alert(contador)
 		contador=contador-1;

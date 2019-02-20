@@ -1,13 +1,13 @@
 function mostrar()
 {	
-	var contador = 1;
+	var contador = 0;
 	contador=parseInt(contador);
 
-	alert('iteración while');
+	alert('Iteración While');
 
-	while(contador <= 10){
-		alert(contador)
+	while(contador < 10){
 		contador=contador+1;
+		alert(contador)
 	}
 
 }//FIN DE LA FUNCIÓN
