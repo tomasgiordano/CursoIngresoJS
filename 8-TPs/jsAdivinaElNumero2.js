@@ -48,7 +48,7 @@ function verificar()
 	}
 	else
 	{
-		if(!(contadorIntentos<=6 || contadorIntentos>=10)){
+		if(!(contadorIntentos<6 || contadorIntentos>10)){
 			contadorIntentos=610;
 		}
 		switch(contadorIntentos){
